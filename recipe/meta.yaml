@@ -1,4 +1,4 @@
-{% set version = '0.1' %}
+{% set version = '0.1.1' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -12,18 +12,12 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/bindr_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/bindr/bindr_{{ version }}.tar.gz
-  sha256: cca166612eeafd6e1c961b34aaf177f9b47f8b4bc37520e277b9920eaa8b2535
-
-
-  # patches:
-   # List any patch files here
-   # - fix.patch
+  sha256: 7c785ca77ceb3ab9282148bcecf64d1857d35f5b800531d49483622fe67505d0
 
 build:
   merge_build_host: True  # [win]
   # If this is a new build for the same version, increment the build number.
   number: 0
-
 
   # This is required to make R link correctly on Linux.
   rpaths:
@@ -71,23 +65,23 @@ extra:
 
 # Package: bindr
 # Title: Parametrized Active Bindings
-# Version: 0.1
-# Authors@R: c( person("Kirill", "Muller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org"), person("RStudio", role = "cph") )
+# Version: 0.1.1
+# Authors@R: c( person("Kirill", "M\u00fcller", role = c("aut", "cre"), email = "krlmlr+r@mailbox.org", comment = c(ORCID = "0000-0002-1416-3412")), person("RStudio", role = c("cph", "fnd")) )
 # Description: Provides a simple interface for creating active bindings where the bound function accepts additional arguments.
 # Suggests: testthat
 # LazyData: true
-# Date: 2016-11-12
+# Date: 2018-03-13
 # BugReports: https://github.com/krlmlr/bindr/issues
 # URL: https://github.com/krlmlr/bindr, https://krlmlr.github.io/bindr
-# RoxygenNote: 5.0.1.9000
+# RoxygenNote: 6.0.1.9000
 # License: MIT + file LICENSE
 # Encoding: UTF-8
 # NeedsCompilation: no
-# Packaged: 2016-11-12 22:17:21 UTC; muelleki
-# Author: Kirill Muller [aut, cre], RStudio [cph]
+# Packaged: 2018-03-13 00:31:30 UTC; muelleki
+# Author: Kirill Muller [aut, cre] (<https://orcid.org/0000-0002-1416-3412>), RStudio [cph, fnd]
 # Maintainer: Kirill Muller <krlmlr+r@mailbox.org>
 # Repository: CRAN
-# Date/Publication: 2016-11-13 01:48:48
+# Date/Publication: 2018-03-13 08:21:23 UTC
 
 # See
 # http://docs.continuum.io/conda/build.html for
